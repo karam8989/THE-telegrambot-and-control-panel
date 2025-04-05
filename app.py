@@ -4,6 +4,11 @@ import database
 app = Flask(__name__)
 app.secret_key = "سر_تشفير_عالي_المستوى"  # يجب تغييره في الإنتاج
 
+# الصفحة الرئيسية: إعادة توجيه تلقائي إلى صفحة تسجيل الدخول
+@app.route("/")
+def index():
+    return redirect(url_for("login"))
+
 # صفحة تسجيل الدخول
 @app.route("/login", methods=["GET", "POST"])
 def login():
