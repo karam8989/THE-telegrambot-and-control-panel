@@ -1,0 +1,5 @@
+aiogram
+flask
+pytz
+aiohttp
+gunicorn
